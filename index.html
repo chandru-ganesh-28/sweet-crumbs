@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sweet Crumbs Bakery | Cakes for Every Celebration</title>
+<meta name="description" content="Sweet Crumbs Bakery - handcrafted birthday, wedding, chocolate and custom cakes, baked fresh daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo"><span class="logo-mark">🧁</span>Sweet Crumbs</a>
+  <nav id="menu" class="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#cakes">Cakes</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="cart-btn" id="cartOpen" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1><span class="l1">Baked With Love,</span> <em class="l2">Made For Every Celebration</em></h1>
+    <p class="l3">Small-batch cakes from our Coimbatore kitchen. Real butter, Belgian chocolate, and decoration done by hand.</p>
+    <div class="hero-btns l4">
+      <a href="#cakes" class="btn">Explore Cakes</a>
+      <a href="#order" class="btn btn-ghost">Design a custom cake</a>
+    </div>
+    <ul class="hero-facts l4"><li>Baked fresh daily</li><li>Eggless on request</li><li>Same-day delivery</li></ul>
+  </div>
+  <div class="hero-img arch"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80" alt="Chocolate layer cake with glossy ganache"></div>
+</section>
+
+<section class="section" id="categories">
+  <div class="head"><h2>Find your kind of cake</h2><p>Pick a category to see matching cakes.</p></div>
+  <div class="cats" id="cats"></div>
+</section>
+
+<section class="section tint" id="cakes">
+  <div class="head"><h2>Popular cakes</h2><p>Prices are for a 1 kg cake unless noted.</p></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-img arch"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" alt="Baker decorating a cake in the kitchen"></div>
+  <div class="about-text">
+    <h2>A home kitchen that grew up</h2>
+    <p>Sweet Crumbs started in 2015 with one oven and a notebook of family recipes. Every birthday we baked for a neighbour turned into three more orders.</p>
+    <p>Today we still bake in small batches. We use fresh cream, real butter and Belgian chocolate, and our decorators finish every cake by hand, never from a mould.</p>
+    <div class="stats"><div><b>9+</b>years baking</div><div><b>12k</b>cakes delivered</div><div><b>4.9</b>average rating</div></div>
+  </div>
+</section>
+
+<section class="section tint" id="gallery">
+  <div class="head"><h2>From our kitchen</h2><p>Tap a photo to view it larger.</p></div>
+  <div class="gallery" id="galleryGrid"></div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="head"><h2>Kind words from our customers</h2></div>
+  <div class="reviews">
+    <blockquote><p>The rose-pistachio cake was the star of my sister's wedding. Guests kept asking where it came from.</p><footer>Priya Raghavan<span>Wedding cake</span></footer></blockquote>
+    <blockquote><p>Ordered a custom Spiderman cake for my son at 2 days' notice. It looked exactly like the sketch and tasted even better.</p><footer>Arjun Menon<span>Custom cake</span></footer></blockquote>
+    <blockquote><p>Their chocolate truffle is rich without being heavy. We now order it for every family birthday.</p><footer>Divya Subramanian<span>Chocolate cake</span></footer></blockquote>
+  </div>
+</section>
+
+<section class="section tint order" id="order">
+  <div class="order-wrap">
+    <div class="order-copy">
+      <h2>Order a custom cake</h2>
+      <p>Tell us what you're celebrating. We'll confirm the design and price on WhatsApp within a few hours.</p>
+      <a class="btn btn-wa" id="waDirect" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+    <form id="orderForm" novalidate>
+      <label>Your name<input type="text" id="name" autocomplete="name" placeholder="e.g. Anjali Kumar"><small class="err"></small></label>
+      <label>Phone number<input type="tel" id="phone" autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile number"><small class="err"></small></label>
+      <div class="row">
+        <label>Cake type<select id="type"><option value="">Choose type</option><option>Birthday Cake</option><option>Wedding Cake</option><option>Chocolate Cake</option><option>Cupcakes (box of 6)</option><option>Custom Design</option></select><small class="err"></small></label>
+        <label>Flavour<select id="flavour"><option value="">Choose flavour</option><option>Chocolate Truffle</option><option>Red Velvet</option><option>Vanilla Bean</option><option>Butterscotch</option><option>Fresh Strawberry</option><option>Rose Pistachio</option></select><small class="err"></small></label>
+      </div>
+      <label>Delivery date<input type="date" id="date"><small class="err"></small></label>
+      <label>Message or design idea (optional)<textarea id="notes" rows="3" placeholder="Name on cake, theme, eggless, etc."></textarea></label>
+      <button type="submit" class="btn">Send order on WhatsApp</button>
+      <p class="form-ok" id="formOk" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="foot-grid">
+    <div><a href="#home" class="logo light"><span class="logo-mark">🧁</span>Sweet Crumbs</a><p>Handcrafted cakes for life's sweetest moments.</p></div>
+    <div><h3>Visit us</h3><p>24, Race Course Road<br>Coimbatore, Tamil Nadu 641018</p></div>
+    <div><h3>Opening hours</h3><p>Mon to Sat: 9 am to 9 pm<br>Sunday: 10 am to 7 pm</p></div>
+    <div><h3>Get in touch</h3><p><a href="tel:+919876543210">+91 98765 43210</a><br><a href="mailto:hello@sweetcrumbs.in">hello@sweetcrumbs.in</a></p>
+      <div class="social"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="Facebook">Facebook</a><a href="#" aria-label="YouTube">YouTube</a></div></div>
+  </div>
+  <p class="copy">© <span id="year"></span> Sweet Crumbs Bakery. Demo website.</p>
+</footer>
+
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+  <span style="font-size:1.7rem;line-height:1" aria-hidden="true">💬</span>
+</a>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-head"><h3>Your cart</h3><button id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot"><div class="total"><span>Total</span><b id="cartTotal">₹0</b></div><button class="btn btn-wa" id="checkout">Order via WhatsApp</button></div>
+</aside>
+
+<div class="lightbox" id="lightbox"><img alt=""><button aria-label="Close">✕</button></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
